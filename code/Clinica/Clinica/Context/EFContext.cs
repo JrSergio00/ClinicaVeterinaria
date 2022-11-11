@@ -15,5 +15,9 @@ namespace Clinica.Context
             new DropCreateDatabaseIfModelChanges<EFContext>());
         }
         public DbSet<Consulta> Consultas { get; set; }
+
+        public DbSet<Especie> Especies { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+
     }
 }
