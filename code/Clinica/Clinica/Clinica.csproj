@@ -108,17 +108,13 @@
     </Compile>
     <Compile Include="Models\Consulta.cs" />
     <Compile Include="Models\Especie.cs" />
+    <Compile Include="Models\Exame.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Procedimentos\Index.cshtml" />
-    <Content Include="Views\Procedimentos\Create.cshtml" />
-    <Content Include="Views\Procedimentos\Edit.cshtml" />
-    <Content Include="Views\Procedimentos\Details.cshtml" />
-    <Content Include="Views\Procedimentos\Delete.cshtml" />
     <Content Include="Views\Animal\Index.cshtml" />
     <Content Include="Views\Animal\Create.cshtml" />
     <Content Include="Views\Animal\Edit.cshtml" />
@@ -129,6 +125,11 @@
     <Content Include="Views\Login\Edit.cshtml" />
     <Content Include="Views\Login\Details.cshtml" />
     <Content Include="Views\Login\Delete.cshtml" />
+    <Content Include="Views\Consullta\Index.cshtml" />
+    <Content Include="Views\Consullta\Create.cshtml" />
+    <Content Include="Views\Consullta\Edit.cshtml" />
+    <Content Include="Views\Consullta\Details.cshtml" />
+    <Content Include="Views\Consullta\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

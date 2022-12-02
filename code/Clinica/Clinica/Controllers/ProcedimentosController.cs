@@ -12,11 +12,11 @@ using Clinica.Context;
 
 namespace Clinica.Controllers
 {
-    public class ProcedimentosController : Controller
+    public class ConsulltaController : Controller
     {
         private EFContext context = new EFContext();
 
-        // GET: Procedimentos
+        // GET: Consultas
         public ActionResult Index()
         {
             return View(context.Consultas.OrderBy(c => c.ConsultaId));
@@ -111,6 +111,64 @@ namespace Clinica.Controllers
             context.SaveChanges();
             //TempData["Message"] = "Consulta " + consulta.ConsultaId.ToUpper() + " foi removida";
             return RedirectToAction("Index");
+        }
+    }
+
+    public class ExameController : Controller
+    {
+        private EFContext context = new EFContext();
+
+        // GET: Exames
+        public ActionResult Index()
+        {
+            return View(context.Exames.OrderBy(c => c.ExameId));
+        }
+
+        // GET: Create
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Exame exame)
+        {
+            context.Exames.Add(exame);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        //GET: Consultas/Edit/5
+        [HttpGet]
+        public ActionResult Edit(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Exame exame = context.Exames.Find(id);
+            if (exame == null)
+            {
+                return HttpNotFound();
+            }
+            return View(exame);
+        }
+
+        // POST: Consulta/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Exame exame)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Entry(exame).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(exame);
         }
     }
 }
