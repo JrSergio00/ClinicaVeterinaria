@@ -19,6 +19,7 @@ namespace Clinica.Context
         public DbSet<Especie> Especies { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Usuario> Exames { get; set; }
-
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Veterinario> Veterinarios{ get; set; }
     }
 }
