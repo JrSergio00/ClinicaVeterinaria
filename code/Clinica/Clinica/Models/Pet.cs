@@ -11,5 +11,6 @@ namespace Clinica.Models
         public string Nome { get; set; }
         public int Idade { get; set; }
         public char Sexo { get; set; }
+        public virtual ICollection<Consulta> Consultas { get; set; }
     }
 }

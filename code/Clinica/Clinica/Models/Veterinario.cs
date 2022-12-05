@@ -12,5 +12,6 @@ namespace Clinica.Models
         public string Senha { get; set; }
         public string Email { get; set; }
         public string Crmv { get; set;  }
+        public virtual ICollection<Consulta> Consultas { get; set; }
     }
 }

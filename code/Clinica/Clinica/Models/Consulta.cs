@@ -10,5 +10,6 @@ namespace Clinica.Models
         public long ConsultaId { get; set; }
         public string Sintomas { get; set; }
         public DateTime Data_hora { get; set; }
+        public virtual ICollection<Exame> Exames { get; set; }
     }
 }
