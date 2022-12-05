@@ -105,4 +105,104 @@ namespace Clinica.Controllers
         }
 
     }
+
+    public class PetController : Controller
+    {
+        private EFContext context = new EFContext();
+
+        // GET: Pets
+        public ActionResult Index()
+        {
+            return View(context.Pets.OrderBy(c => c.PetId));
+        }
+
+        // GET: Create
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Pet pet)
+        {
+            context.Pets.Add(pet);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        //GET: Pets/Edit/5
+        [HttpGet]
+        public ActionResult Edit(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Pet pet = context.Pets.Find(id);
+            if (pet == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pet);
+        }
+
+        // POST: Pet/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Pet pet)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Entry(pet).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(pet);
+        }
+
+        // GET: Pet/Details/5
+        public ActionResult Details(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Pet pet= context.Pets.Find(id);
+            if (pet == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pet);
+        }
+
+        //GET: Pet/Delete/5
+        [HttpGet]
+        public ActionResult Delete(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Pet pet= context.Pets.Find(id);
+            if (pet == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pet);
+        }
+
+        //POST: Pet/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(long id)
+        {
+            Pet pet= context.Pets.Find(id);
+            context.Pets.Remove(pet);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+    }
 }

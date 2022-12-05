@@ -112,6 +112,8 @@
     <Compile Include="Models\Consulta.cs" />
     <Compile Include="Models\Especie.cs" />
     <Compile Include="Models\Exame.cs" />
+    <Compile Include="Models\Pet.cs" />
+    <Compile Include="Models\TipoSexo.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Veterinario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,6 +136,26 @@
     <Content Include="Views\Consullta\Edit.cshtml" />
     <Content Include="Views\Consullta\Details.cshtml" />
     <Content Include="Views\Consullta\Delete.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Create.cshtml" />
+    <Content Include="Views\Cliente\Edit.cshtml" />
+    <Content Include="Views\Cliente\Details.cshtml" />
+    <Content Include="Views\Cliente\Delete.cshtml" />
+    <Content Include="Views\Prestadores\Index.cshtml" />
+    <Content Include="Views\Prestadores\Create.cshtml" />
+    <Content Include="Views\Prestadores\Edit.cshtml" />
+    <Content Include="Views\Prestadores\Details.cshtml" />
+    <Content Include="Views\Prestadores\Delete.cshtml" />
+    <Content Include="Views\Exame\Index.cshtml" />
+    <Content Include="Views\Exame\Create.cshtml" />
+    <Content Include="Views\Exame\Edit.cshtml" />
+    <Content Include="Views\Exame\Details.cshtml" />
+    <Content Include="Views\Exame\Delete.cshtml" />
+    <Content Include="Views\Pet\Index.cshtml" />
+    <Content Include="Views\Pet\Create.cshtml" />
+    <Content Include="Views\Pet\Edit.cshtml" />
+    <Content Include="Views\Pet\Details.cshtml" />
+    <Content Include="Views\Pet\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,8 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Cliente\" />
-    <Folder Include="Views\Prestadores\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
