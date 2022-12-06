@@ -4,9 +4,10 @@
     "\\code",
     "\\code\\Clinica",
     "\\code\\Clinica\\Clinica",
+    "\\code\\Clinica\\Clinica\\Controllers",
     "\\code\\Clinica\\Clinica\\Views",
     "\\code\\Clinica\\Clinica\\Views\\Consullta"
   ],
-  "SelectedNode": "\\code\\Clinica\\Clinica\\Views\\Consullta\\Edit.cshtml",
+  "SelectedNode": "\\code\\Clinica\\Clinica\\Controllers\\PrestadoresController.cs",
   "PreviewInSolutionExplorer": false
 }

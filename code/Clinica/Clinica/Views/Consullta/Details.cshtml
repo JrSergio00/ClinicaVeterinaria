@@ -19,19 +19,35 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Sintomas)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Sintomas)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Data_hora)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Data_hora)
             </dd>
-    
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VeterinarioId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VeterinarioId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PetId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PetId)
+            </dd>
+
         </dl>
     </div>
     <p>
@@ -40,3 +56,6 @@
     </p>
 </body>
 </html>
+
+@Html.Partial("~/Views/Consullta/_porVeterinario.cshtml", Model.Veterinarios.ToList())
+@Html.Partial("~/Views/Consullta/_porPet.cshtml", Model.Pets.ToList())

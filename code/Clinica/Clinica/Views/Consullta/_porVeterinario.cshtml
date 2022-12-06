@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Clinica.Models.Veterinario>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Relação de Veterinários registrados para a Consulta
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.VeterinarioId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Crmv)
+                    </th>
+                    <th>Veterinario</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VeterinarioId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Crmv)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer panel-info">
+    </div>
+</div>

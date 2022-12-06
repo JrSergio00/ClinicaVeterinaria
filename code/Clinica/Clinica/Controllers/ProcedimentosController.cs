@@ -170,5 +170,49 @@ namespace Clinica.Controllers
             }
             return View(exame);
         }
+
+
+        // GET: Exame/Details/5
+        public ActionResult Details(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Exame exame= context.Exames.Find(id);
+            if (exame == null)
+            {
+                return HttpNotFound();
+            }
+            return View(exame);
+        }
+
+        //GET: Exame/Delete/5
+        [HttpGet]
+        public ActionResult Delete(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Exame exame = context.Exames.Find(id);
+            if (exame == null)
+            {
+                return HttpNotFound();
+            }
+            return View(exame);
+        }
+
+        //POST: Exame/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(long id)
+        {
+            Exame exame = context.Exames.Find(id);
+            context.Exames.Remove(exame);
+            context.SaveChanges();
+            //TempData["Message"] = "Exame " + exame.ExameId + " foi removida";
+            return RedirectToAction("Index");
+        }
     }
 }
