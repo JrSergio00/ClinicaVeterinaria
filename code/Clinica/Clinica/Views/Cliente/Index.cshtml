@@ -20,22 +20,37 @@
             <th>
                 @Html.DisplayNameFor(model => model.Cpf)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cpf)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ClienteId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.ClienteId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.ClienteId })
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ClienteId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ClienteId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ClienteId })
+        </td>
+    </tr>
+        }
+
     </table>
+    <div>
+        <a href="~/Home/Index">Retornar para a home</a>
+    </div>
 </body>
 </html>

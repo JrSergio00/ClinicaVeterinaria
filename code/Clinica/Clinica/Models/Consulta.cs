@@ -16,5 +16,6 @@ namespace Clinica.Models
         public Veterinario Veterinario { get; set; }
         public virtual ICollection<Pet> Pets { get; set; }
         public virtual ICollection<Veterinario> Veterinarios { get; set; }
+        public virtual ICollection<Exame> Exames { get; set; }
     }
 }

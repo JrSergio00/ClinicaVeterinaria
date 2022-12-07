@@ -19,24 +19,35 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Nome)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Nome)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Idade)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Idade)
             </dd>
-    
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EspecieId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EspecieId)
+            </dd>
+
         </dl>
     </div>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.PetId }) |
         @Html.ActionLink("Back to List", "Index")
     </p>
+    <div>
+        <a href="~/Home/Index">Retornar para a home</a>
+    </div>
 </body>
 </html>

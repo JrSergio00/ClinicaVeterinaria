@@ -6,8 +6,9 @@
     "\\code\\Clinica\\Clinica",
     "\\code\\Clinica\\Clinica\\Controllers",
     "\\code\\Clinica\\Clinica\\Views",
-    "\\code\\Clinica\\Clinica\\Views\\Consullta"
+    "\\code\\Clinica\\Clinica\\Views\\Consullta",
+    "\\code\\Clinica\\Clinica\\Views\\Exame"
   ],
-  "SelectedNode": "\\code\\Clinica\\Clinica\\Controllers\\PrestadoresController.cs",
+  "SelectedNode": "\\code\\Clinica\\Clinica\\Views\\Exame\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

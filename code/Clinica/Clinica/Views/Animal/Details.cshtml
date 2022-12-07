@@ -19,16 +19,19 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Nome)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Nome)
             </dd>
-    
+
         </dl>
     </div>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.EspecieId }) |
         @Html.ActionLink("Back to List", "Index")
     </p>
+    <div>
+        <a href="~/Home/Index">Retornar para a home</a>
+    </div>
 </body>
 </html>

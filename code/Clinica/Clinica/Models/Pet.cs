@@ -10,7 +10,10 @@ namespace Clinica.Models
         public long PetId { get; set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
-        public char Sexo { get; set; }
+        public string Sexo { get; set; }
+        public Especie Especie{ get; set; }
+        public long? EspecieId { get; set; }
         public virtual ICollection<Consulta> Consultas { get; set; }
+
     }
 }

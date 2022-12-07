@@ -31,29 +31,34 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Senha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Crmv)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.VeterinarioId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.VeterinarioId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.VeterinarioId })
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Senha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Crmv)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.VeterinarioId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.VeterinarioId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.VeterinarioId })
+                </td>
+            </tr>
+        }
+
     </table>
+
+    <div>
+        <a href="~/Home/Index">Retornar para a home</a>
+    </div>
 </body>
 </html>

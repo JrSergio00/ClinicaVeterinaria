@@ -11,6 +11,6 @@ namespace Clinica.Models
         public string Descricao { get; set; }
         public Consulta Consulta { get; set; }
         public long? ConsultaId { get; set; }
-        public virtual ICollection<Exame> Exames{ get; set; }
+
     }
 }
